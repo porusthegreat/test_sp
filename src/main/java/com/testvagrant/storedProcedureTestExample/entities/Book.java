@@ -1,4 +1,4 @@
-package com.example.testStroedProcedures.entities;
+package com.testvagrant.storedProcedureTestExample.entities;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -29,6 +29,10 @@ import javax.persistence.TemporalType;
                 @StoredProcedureParameter(name = "authorFirstname", mode = ParameterMode.IN, type = String.class),
                 @StoredProcedureParameter(name = "authorLastname", mode = ParameterMode.IN, type = String.class),
         })
+@NamedStoredProcedureQuery(
+        name = "getBooks_sp",
+        procedureName = "getBooks"
+)
 public class Book implements Serializable {
 
     private static final long serialVersionUID = -8105130932670794882L;
@@ -58,8 +62,7 @@ public class Book implements Serializable {
     }
 
     /**
-     * @param name
-     *            the name to set
+     * @param name the name to set
      */
     public void setName(String name) {
         this.name = name;
@@ -73,8 +76,7 @@ public class Book implements Serializable {
     }
 
     /**
-     * @param releaseDate
-     *            the releaseDate to set
+     * @param releaseDate the releaseDate to set
      */
     public void setReleaseDate(Date releaseDate) {
         this.releaseDate = releaseDate;
@@ -88,8 +90,7 @@ public class Book implements Serializable {
     }
 
     /**
-     * @param author
-     *            the author to set
+     * @param author the author to set
      */
     public void setAuthor(Author author) {
         this.author = author;
@@ -103,8 +104,7 @@ public class Book implements Serializable {
     }
 
     /**
-     * @param id
-     *            the id to set
+     * @param id the id to set
      */
     public void setId(Integer id) {
         this.id = id;

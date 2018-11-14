@@ -1,4 +1,4 @@
-package com.example.testStroedProcedures.entities;
+package com.testvagrant.storedProcedureTestExample.entities;
 
 import java.io.Serializable;
 import java.util.List;
